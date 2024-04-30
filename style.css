@@ -10,6 +10,7 @@
 :root {
   --main-color: #c5c5c5;
   --main2-color: #4a4a4a;
+  --hoverButton-color: #868686;
   --text-color: #7e7e7e;
 }
 
@@ -102,12 +103,32 @@ section.hero {
   }
 }
 
+.hero-1:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hero-1:not(:hover) {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
 .button {
   background-color: var(--main2-color);
 }
 
 .button:hover {
-  background-color: pink;
+  background-color: var(--hoverButton-color);
+  letter-spacing: 2px;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.button:not(:hover) {
+    background-color: var(--main2-color);
+    letter-spacing: 0;
+    transition: 0.5s ease-out;
 }
 
 /* ---------- section infomation ---------- */
@@ -182,10 +203,25 @@ div.infoContent {
 
 div.infoMain:hover {
   background-color: var(--main-color);
+  transform: scale(1.05);
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+div.infoMain:not(:hover) {
+    transform: scale(1);
+    transition: 0.5s ease-out;
 }
 
 div.info:hover {
   background-color: var(--main-color);
+  transform: scale(1.05);
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+div.info:not(:hover) {
+  transform: scale(1);
+  transition: 0.5s ease-out;
 }
 
 /* ---------- course ----------*/
@@ -243,6 +279,11 @@ div.info:hover {
   }
   .cardImg {
     width: 100%;
+    height: auto;
+    img {
+        height: 100%;
+    }
+    /* background-color: #fff; */
   }
 }
 
@@ -259,6 +300,17 @@ div.courseCard {
 
 div.cardContent {
   background-color: #fff;
+}
+
+div.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+div.card:not(:hover){
+    transform: scale(1);
+    transition: 0.5s;
 }
 
 /* why this code not work */
@@ -359,11 +411,27 @@ div.thesisTitle {
 .thesisMain:hover {
   background-color: var(--main-color);
   cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.thesisMain:not(:hover) {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s;
 }
 
 .thesisChild:hover {
   background-color: var(--main-color);
   cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.thesisChild:not(:hover) {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s;
 }
 
 /* ---------- footer ---------- */
@@ -524,7 +592,37 @@ footer {
   div.thesisTitle {
     padding: 32px 0 16px 0;
   }
+/* ---------- footer ---------- */
   div.footerLeft{
     display: none;
   }
+}
+
+/* ---------- font ---------- */
+h1.heroTitle {
+    color: var(--main2-color);
+    font-size: 34px;
+    font-weight: 750;
+}
+
+p.heroParagraph {
+    color: var(--main2-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h1 {
+    color: var(--main2-color);
+}
+
+h2 {
+    color: var(--main2-color);
+}
+
+p{
+    color: var(--main2-color);
+}
+
+a.readMore {
+    color:rgb(71, 141, 199);
 }
