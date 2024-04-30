@@ -19,6 +19,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* ----------nav bar---------- */
 nav {
   background-color: #fff;
   width: 100%;
@@ -70,6 +71,7 @@ div.logo {
   display: none;
 }
 
+/* ----------section hero---------- */
 section.hero {
   background-color: var(--main-color);
   display: flex;
@@ -108,7 +110,82 @@ section.hero {
   background-color: pink;
 }
 
-@media (max-width: 720px) {
+/* ---------- section infomation ---------- */
+
+.infomation {
+    width: 100%;
+    display: flex;
+    padding: 32px 0 0 24px;
+    background-color: white;
+    div.infoMain {
+        width: 60%;
+        padding: 0 24px 0 0;
+        div.infoMainPic {
+            width: 100%;
+            padding-bottom: 32px;
+            img {
+                width: 100%;
+            }
+        }
+        div.infoMainContent {
+            width: 100%;
+            h1{
+                margin-bottom: 24px;
+            }
+            p {
+                margin-bottom: 32px;
+            }
+        }
+    }
+    div.infoRight {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        div.info{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            div.infoPic{
+                width: 35%;
+                height: auto;
+                padding: 16px;
+                img {
+                    width: 100%;
+                }
+            }
+            div.infoContent {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                    margin-bottom: 8px;
+                    width: 100%;
+                }
+                p {
+                    margin-bottom: 8px;
+                    width: 100%;
+                }
+                a {
+                    width: 100%;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+div.infoContent {
+    width: 65%;
+}
+.infoPicMobile {
+    display: none;
+}
+
+/* ------------------------------------------ */
+
+/* Responsive Web Design */
+
+@media (max-width: 480px) {
+  /*---------- nav bar mobile ---------*/
   .navList {
     display: none;
   }
@@ -134,8 +211,59 @@ section.hero {
       }
     }
   }
-
-  .hero {
+  /* ---------- section hero mobile ---------- */
+  section.hero {
     flex-direction: column;
+    width: 100%;
+    padding: 0;
+    div.hero-1 {
+      width: 100%;
+    }
+    div.hero-2 {
+      padding: 32px 16px;
+      width: 100%;
+      h1 {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      p {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+      a {
+        width: 100%;
+      }
+    }
+  }
+  /* ---------- infomation mobile ---------- */
+  .infomation {
+    width: 100%;
+    padding: 0;
+    div.infoMain , div.infoPic{
+        display: none;
+    }
+    div.infoPicMobile {
+        display: flex;
+    }
+    div.infoRight{
+        width: 100%;
+        display: flex;
+    }
+    div.info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 16px;
+        div.infoPicMobile{
+            width: 100%;
+            padding-bottom: 16px;
+            img {
+                width: 100%;
+            }
+        }
+        div.infoContent{
+            width: 100%;
+        }
+    }
   }
 }
