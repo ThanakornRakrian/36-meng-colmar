@@ -15,7 +15,7 @@
 
 body {
   height: 100vh;
-  background-color: rgb(172, 74, 172);
+  background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -113,73 +113,274 @@ section.hero {
 /* ---------- section infomation ---------- */
 
 .infomation {
-    width: 100%;
-    display: flex;
-    padding: 32px 0 0 24px;
-    background-color: white;
-    div.infoMain {
-        width: 60%;
-        padding: 0 24px 0 0;
-        div.infoMainPic {
-            width: 100%;
-            padding-bottom: 32px;
-            img {
-                width: 100%;
-            }
-        }
-        div.infoMainContent {
-            width: 100%;
-            h1{
-                margin-bottom: 24px;
-            }
-            p {
-                margin-bottom: 32px;
-            }
-        }
+  width: 100%;
+  display: flex;
+  padding: 32px 0 0 24px;
+  background-color: white;
+  div.infoMain {
+    width: 60%;
+    padding: 0 24px 0 0;
+    div.infoMainPic {
+      width: 100%;
+      padding-bottom: 32px;
+      img {
+        width: 100%;
+      }
     }
-    div.infoRight {
+    div.infoMainContent {
+      width: 100%;
+      h1 {
+        margin-bottom: 24px;
+      }
+      p {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  div.infoRight {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    div.info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      div.infoPic {
+        width: 35%;
+        height: auto;
+        padding: 16px;
+        img {
+          width: 100%;
+        }
+      }
+      div.infoContent {
         display: flex;
         flex-direction: column;
-        width: 40%;
-        div.info{
-            display: flex;
-            align-items: center;
-            width: 100%;
-            div.infoPic{
-                width: 35%;
-                height: auto;
-                padding: 16px;
-                img {
-                    width: 100%;
-                }
-            }
-            div.infoContent {
-                display: flex;
-                flex-direction: column;
-                h2 {
-                    margin-bottom: 8px;
-                    width: 100%;
-                }
-                p {
-                    margin-bottom: 8px;
-                    width: 100%;
-                }
-                a {
-                    width: 100%;
-                    text-decoration: none;
-                }
-            }
+        h2 {
+          margin-bottom: 8px;
+          width: 100%;
         }
+        p {
+          margin-bottom: 8px;
+          width: 100%;
+        }
+        a {
+          width: 100%;
+          text-decoration: none;
+        }
+      }
     }
+  }
 }
 
 div.infoContent {
-    width: 65%;
+  width: 65%;
 }
 .infoPicMobile {
-    display: none;
+  display: none;
 }
 
+div.infoMain:hover {
+  background-color: var(--main-color);
+}
+
+div.info:hover {
+  background-color: var(--main-color);
+}
+
+/* ---------- course ----------*/
+
+.course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--main-color);
+  p {
+    color: var(--text-color);
+  }
+  .courseTitle {
+    text-align: center;
+    width: 100%;
+  }
+  .cardFirstRow {
+    display: flex;
+    width: 100%;
+    div.card {
+      width: 100%;
+      margin-bottom: 8px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .cardSecondRow {
+    display: flex;
+    width: 100%;
+    div.card {
+      width: 100%;
+      margin-bottom: 8px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .courseCard {
+    width: 100%;
+    div.card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  div.cardContent {
+    padding: 16px 16px 8px 16px;
+    height: 100%;
+    * {
+      margin-bottom: 8px;
+      width: 100%;
+    }
+  }
+  .cardImg {
+    width: 100%;
+  }
+}
+
+div.card {
+  padding: 16px;
+}
+
+div.courseTitle {
+  padding: 32px 0;
+}
+div.courseCard {
+  padding: 0 56px 16px 56px;
+}
+
+div.cardContent {
+  background-color: #fff;
+}
+
+/* why this code not work */
+/* .course{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    div.courseCard{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        div.cardFirstRow{
+            display: flex;
+            width: 100%;
+            div.cardImg {
+                width: 100%;
+            }
+        }
+        div.cardSecondRow{
+            display: flex;
+            width: 100%;
+            div.cardImg{
+                width: 100%;
+            }
+        }
+        div.card{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+} */
+
+/* ---------- thesis ---------- */
+
+.thesis {
+  background-color: #fff;
+  div.thesisTitle {
+    text-align: center;
+  }
+  .thesisMain {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    p {
+      color: var(--text-color);
+    }
+    .thesisVideo {
+      width: 100%;
+      video {
+        width: 100%;
+        padding: 0 24px;
+      }
+    }
+    .thesisVideoContent {
+      padding: 24px;
+      h2 {
+        margin-bottom: 8px;
+      }
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .thesisContainer {
+    display: flex;
+  }
+  .thesisRight {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    p {
+      color: var(--text-color);
+    }
+    .thesisChild {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .thesisPic {
+        width: 35%;
+        img {
+          width: 100%;
+          padding: 16px;
+        }
+      }
+      .thesisPicContent {
+        width: 65%;
+      }
+    }
+  }
+}
+
+div.thesisTitle {
+  padding: 32px 0;
+}
+
+.thesisMain:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.thesisChild:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+/* ---------- footer ---------- */
+footer {
+    display: flex;
+    padding: 16px 24px 32px 24px;
+    justify-content: space-between;
+    .footerRight {
+      display: flex;
+    }
+    .footerLeft {
+      display: flex;
+      p {
+        margin-left: 10px;
+      }
+    }
+  } 
 /* ------------------------------------------ */
 
 /* Responsive Web Design */
@@ -239,31 +440,91 @@ div.infoContent {
   .infomation {
     width: 100%;
     padding: 0;
-    div.infoMain , div.infoPic{
-        display: none;
+    div.infoMain,
+    div.infoPic {
+      display: none;
     }
     div.infoPicMobile {
-        display: flex;
+      display: flex;
     }
-    div.infoRight{
-        width: 100%;
-        display: flex;
+    div.infoRight {
+      width: 100%;
+      display: flex;
     }
     div.info {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 16px;
+      div.infoPicMobile {
         width: 100%;
-        padding: 16px;
-        div.infoPicMobile{
-            width: 100%;
-            padding-bottom: 16px;
-            img {
-                width: 100%;
-            }
+        padding-bottom: 16px;
+        img {
+          width: 100%;
         }
-        div.infoContent{
-            width: 100%;
-        }
+      }
+      div.infoContent {
+        width: 100%;
+      }
     }
+  }
+  /* ---------- course mobile ---------- */
+  .courseMobile {
+    display: none;
+  }
+  .course {
+    background-color: #fff;
+  }
+  div.courseTitle {
+    padding: 32px 0 16px 0;
+  }
+  div.courseCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px 24px 16px;
+    .cardFirstRow {
+      display: flex;
+      flex-direction: column;
+    }
+    .cardSecondRow {
+      display: flex;
+      flex-direction: column;
+    }
+    div.card {
+      padding: 0;
+    }
+  }
+  div.cardContent {
+    background-color: var(--main-color);
+  }
+  /* ---------- thesis ---------- */
+  div.thesisVideoContent,
+  div.thesisRight,
+  div.thesisChild,
+  div.thesisPic,
+  div.thesisPicContent,
+  div.thesisContainer {
+    display: none;
+  }
+  .thesisContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .thesisMain {
+    width: 100% !important;
+    .thesisVideo {
+      width: 100%;
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  div.thesisTitle {
+    padding: 32px 0 16px 0;
+  }
+  div.footerLeft{
+    display: none;
   }
 }
